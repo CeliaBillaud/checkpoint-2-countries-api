@@ -9,7 +9,7 @@ export class Country extends BaseEntity {
   id: number;
 
   @Field()
-  @Column({ length: 50 })
+  @Column({ length: 10 })
   code: string;
 
   @Field()
@@ -19,4 +19,8 @@ export class Country extends BaseEntity {
   @Field()
   @Column("text")
   emoji: string;
+
+  @Field()
+  @Column({ length: 10, nullable: true })
+  continent: string;
 }
